@@ -1,0 +1,5 @@
+mail:
+  sendgrid:
+    apiKey: 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
+    fromEmail: faisal_sendgrid@yopmail.com
+    senderName: Faisal
