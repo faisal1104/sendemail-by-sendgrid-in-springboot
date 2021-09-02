@@ -1,25 +1,22 @@
 package com.example.sendgriddemo.service;
 
-import com.example.sendgriddemo.model.EmailData;
+import com.example.sendgriddemo.domain.EmailData;
 import com.sendgrid.*;
 import freemarker.template.Configuration;
-import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.mail.MailException;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
 public class SendGridEmailService {
+  private final EmailConfigService emailConfigService;
   private final Configuration freemakerConfig;
 
   @Value("${mail.sendgrid.fromEmail}")
@@ -74,10 +71,12 @@ public class SendGridEmailService {
 
   public String getEmailBodyContent(EmailData data) throws IOException, TemplateException {
 
+    var emailConfig = emailConfigService.getEmailConfigByEmailCode(data.getEmailCode());
+
     freemakerConfig.setClassForTemplateLoading(this.getClass(), "/email-templates");
-    var freemarkerTemplate = freemakerConfig.getTemplate("email-template.ftl");
+    var freemarkerTemplate = freemakerConfig.getTemplate(emailConfig.getTemplate());
     Map<String, Object> model = new HashMap<>();
-    model.put("mailBody", data.getBodyHtml());
+    model.put("mailBody", emailConfig.getHtmlBody());
     return FreeMarkerTemplateUtils.processTemplateIntoString(freemarkerTemplate, model);
   }
 }

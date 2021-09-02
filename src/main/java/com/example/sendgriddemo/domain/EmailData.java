@@ -1,4 +1,4 @@
-package com.example.sendgriddemo.model;
+package com.example.sendgriddemo.domain;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -9,9 +9,9 @@ import java.util.Map;
 @Data
 @Accessors(chain = true)
 public class EmailData implements Serializable {
+  private String emailCode;
   private String[] toEmailAddress;
   private String subject;
-  private String bodyHtml;
   private Map<String, Object> templateModels;
   private Map<String, Map<String, String>> substitutionMap;
 }

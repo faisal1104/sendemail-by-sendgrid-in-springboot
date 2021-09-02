@@ -68,7 +68,7 @@
         }
 
         .header .header-logo {
-            background: #800080;
+            background: #2C3E50;
             padding: 20px 15px 15px;
         }
 
@@ -362,7 +362,7 @@
                     <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
                         <tr>
                             <td class="header-logo" align="middle">
-                                <img src="https://i.ibb.co/Dts8fmt/logo.png">
+                                <img src="https://i.ibb.co/zQfSFjK/logopes.png">
 
                             </td>
                         </tr>
@@ -376,37 +376,8 @@
                             <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td>
-                                        <h3 class="title">Dear $email$ + $firstName$,</h3>
+
                                         ${mailBody}
-                                       <#-- <h3 class="title">Hi Jhon,</h3>
-                                        <p class="subtitle">We received a request to reset your Convenience Pay
-                                            password</p>
-                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
-                                               class="btn btn-primary">
-                                            <tbody>
-                                            <tr>
-                                                <td align="left">
-                                                    <table role="presentation" border="0" cellpadding="0"
-                                                           cellspacing="0">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td><a href="http://htmlemail.io" target="_blank">Reset
-                                                                    Password</a>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                        <a class="reset-password-url"
-                                           href="www.conveniencepay.com/restpassword">www.conveniencepay.com/restpassword</a>
-                                        <p class="email-content">Please click the button above within 24 hours of
-                                            receiving this email. If
-                                            you didn’t request to reset your password, rest assured your account is safe
-                                            and you can ignore
-                                            this email.</p>-->
 
                                     </td>
                                 </tr>
@@ -417,13 +388,12 @@
                     <!-- END MAIN CONTENT AREA -->
                 </table>
                 <div class="footer">
-                    <a href=""><img src="https://i.ibb.co/PYByKJF/about-us.png"></a>
+                    <a href=""><img src="https://i.ibb.co/x1bsyrh/pesfooter.jpg"></a>
                     <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                             <td class="address-area">
                                 <div class="address">
-                    <span>© 2020 Convenience Pay. LP42 Building #3, Mangra Trace, San Juan, Trinidad &
-                      Tobago
+                    <span>© 2021 Konami Digital Entertainment
                       <br> Don't like these emails? <a href="#">Unsubscribe</a>.</span>
                                     <hr style="margin-top: 15px;"/>
                                 </div>
@@ -449,7 +419,7 @@
                     individual(s) addressed in the message. If you are not the named addressee, you should not
                     disseminate, distribute, or copy this e-mail. If you are not the intended recipient, you are
                     notified that disclosing, distributing, or copying this e-mail is strictly prohibited.
-                    </p>
+                </p>
             </div>
         </td>
         <td>&nbsp;</td>

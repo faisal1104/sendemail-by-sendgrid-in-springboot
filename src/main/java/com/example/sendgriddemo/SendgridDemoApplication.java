@@ -9,5 +9,4 @@ public class SendgridDemoApplication {
   public static void main(String[] args) {
     SpringApplication.run(SendgridDemoApplication.class, args);
   }
-
 }

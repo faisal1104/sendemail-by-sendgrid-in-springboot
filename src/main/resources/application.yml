@@ -1,5 +1,15 @@
 mail:
   sendgrid:
-    apiKey: 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
-    fromEmail: faisal_sendgrid@yopmail.com
-    senderName: Faisal
+    apiKey: apikey
+    fromEmail: email
+    senderName: name
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/email_db?createDatabaseIfNotExist=true&useSSL=false
+    username: root
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
