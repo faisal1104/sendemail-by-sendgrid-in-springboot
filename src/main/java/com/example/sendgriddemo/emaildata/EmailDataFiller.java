@@ -1,4 +1,4 @@
-package com.example.sendgriddemo.service;
+package com.example.sendgriddemo.emaildata;
 
 import com.example.sendgriddemo.domain.EmailData;
 import java.util.*;
@@ -18,7 +18,7 @@ public class EmailDataFiller {
         .setSubject("New Tournament Announcement!")
         .setToEmailAddress(emails.toArray(String[]::new))
         .setEmailCode("Tournament Announcement")
-        .setSubstitutionMap(model);
+        .setDynamicValueMap(model);
   }
 
   public static EmailData registrationConfirmationEmailDataFiller(String name, String email) {
@@ -34,7 +34,7 @@ public class EmailDataFiller {
     return new EmailData()
         .setSubject("Registration Successful!")
         .setToEmailAddress(mails)
-        .setSubstitutionMap(model)
+        .setDynamicValueMap(model)
         .setEmailCode("Registration Successful");
   }
 }

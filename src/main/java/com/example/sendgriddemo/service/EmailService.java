@@ -1,5 +1,6 @@
 package com.example.sendgriddemo.service;
 
+import com.example.sendgriddemo.emaildata.EmailDataFiller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ public class EmailService {
   private final SendGridEmailService sendGridEmailService;
 
   public void sendTournamentAnnouncementEmail(String fromTime) {
-    var emailList = List.of("faisal1104a@gmail.com", "faisal_admin@yopmail.com");
+    var emailList = List.of("faisal1104a@gmail.com", "faisal.ahammad@ymail.com");
     var emailData = EmailDataFiller.tournamentAnnouncementDataFiller(emailList, fromTime);
     try {
       sendGridEmailService.sendEmailWithTemplate(emailData);

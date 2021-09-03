@@ -55,7 +55,7 @@ public class SendGridEmailService {
     for (String toEmail : emailData.getToEmailAddress()) {
       Personalization personalization = new Personalization();
       personalization.addTo(new Email(toEmail));
-      var substitutionMap = emailData.getSubstitutionMap().get(toEmail);
+      var substitutionMap = emailData.getDynamicValueMap().get(toEmail);
 
       for (var map : substitutionMap.entrySet()) {
         personalization.addSubstitution(map.getKey(), map.getValue());

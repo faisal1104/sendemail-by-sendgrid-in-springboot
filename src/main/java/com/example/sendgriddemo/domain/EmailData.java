@@ -13,5 +13,5 @@ public class EmailData implements Serializable {
   private String[] toEmailAddress;
   private String subject;
   private Map<String, Object> templateModels;
-  private Map<String, Map<String, String>> substitutionMap;
+  private Map<String, Map<String, String>> dynamicValueMap;
 }
